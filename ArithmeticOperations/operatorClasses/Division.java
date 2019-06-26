@@ -4,7 +4,7 @@ import ArithmeticOperations.contract.Calculatable;
 
 public class Division extends Calculatable {
     public Division() {
-        super('/');
+        super("/");
     }
 
     @Override

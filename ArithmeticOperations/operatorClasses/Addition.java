@@ -4,7 +4,7 @@ import ArithmeticOperations.contract.Calculatable;
 
 public class Addition extends Calculatable {
     public Addition() {
-        super('+');
+        super("+");
     }
 
     @Override

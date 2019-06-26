@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class Calculator {
     private Scanner sc = new Scanner(System.in);
-    private Map<Character, Calculatable> operatorsMap = new RegisteredOperators().getOperatorsMap();
+    private Map<String, Calculatable> operatorsMap = new RegisteredOperators().getOperatorsMap();
 
     private double getOperand(String prompt) {
         Double operand = null;
@@ -24,20 +24,19 @@ public class Calculator {
     private Calculatable getOperator() {
         while (true) {
             System.out.println("Type arithmetic operation:" + getSym());
-            String input = sc.nextLine();
-            Character operator = input.charAt(0);
+            String operator = sc.nextLine();
             Calculatable operation = operatorsMap.get(operator);
 
             if (operation != null) {
                 return operation;
             }
-            System.out.println("This operator: " + " ' " + input + " ' " + " is not valid!, try again");
+            System.out.println("This operator: " + " ' " + operator + " ' " + " is not valid!, try again");
         }
     }
 
     private void showResult(Calculatable operation, double firstOperand, double secondOperand) {
         double result = operation.calculate(firstOperand, secondOperand);
-        System.out.println(firstOperand + " " + operation.keyChar + " " + secondOperand + " = " + result);
+        System.out.println(firstOperand + " " + operation.keyStr + " " + secondOperand + " = " + result);
     }
 
     private boolean continueOrNot() {

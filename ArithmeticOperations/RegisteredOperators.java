@@ -17,10 +17,10 @@ public class RegisteredOperators {
             new Subtraction()
     };
 
-    public Map<Character, Calculatable> getOperatorsMap() {
-        Map<Character, Calculatable> operatorsMap = new HashMap<>();
+    public Map<String, Calculatable> getOperatorsMap() {
+        Map<String, Calculatable> operatorsMap = new HashMap<>();
         for (Calculatable operator : operators) {
-            operatorsMap.put(operator.keyChar, operator);
+            operatorsMap.put(operator.keyStr, operator);
         }
         return operatorsMap;
     }

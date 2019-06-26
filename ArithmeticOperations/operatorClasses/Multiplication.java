@@ -4,7 +4,7 @@ import ArithmeticOperations.contract.Calculatable;
 
 public class Multiplication extends Calculatable {
     public Multiplication() {
-        super('*');
+        super("*");
     }
 
     @Override

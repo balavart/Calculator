@@ -4,7 +4,7 @@ import ArithmeticOperations.contract.Calculatable;
 
 public class Subtraction extends Calculatable {
     public Subtraction() {
-        super('-');
+        super("-");
     }
 
     @Override

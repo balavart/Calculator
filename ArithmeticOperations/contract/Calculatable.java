@@ -1,10 +1,10 @@
 package ArithmeticOperations.contract;
 
 public abstract class Calculatable {
-    public Character keyChar;
+    public String keyStr;
 
-    public Calculatable(Character keyChar) {
-        this.keyChar = keyChar;
+    public Calculatable(String keyStr) {
+        this.keyStr = keyStr;
     }
 
     public abstract double calculate(double a, double b);
